@@ -1,5 +1,5 @@
 """
-Django 1.11.
+Django 3.1.7
 """
 
 import os
