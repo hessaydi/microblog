@@ -120,11 +120,11 @@ STATICFILES_DIRS = (
 # gmail_send/settings.py
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hessaydi'
-EMAIL_HOST_PASSWORD = 'Hessaydi@'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'hessaydi@gmail.com'
+DEFAULT_FROM_EMAIL = ''
 
 CELERY_BEAT_SCHEDULE = {
     'scheduled_task': {
