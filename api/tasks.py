@@ -19,7 +19,7 @@ def send_email_task(username, email):
 @task(name="delete_messages_in_ten_days")
 def delete_messages_in_ten_days():
     logger.info("Deleteed Posts")
-    models.Post.objects.filter(created_at__lte=timezone.now()-timedelta(hours=10))
+    models.Post.objects.filter(created_at__lte=timezone.now()-timedelta(days=10)).delete()
     return "Delete posts create over then 10 days"
 
 # celery -A core beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
