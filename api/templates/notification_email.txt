@@ -1,0 +1,8 @@
+Hello {{username|safe}},
+
+Your favorite hashtag {{hashtag|safe}} has been appeared in a new Post.
+
+Thank you!
+
+----
+Team

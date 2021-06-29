@@ -1,0 +1,8 @@
+Hello {{username|safe}},
+
+Welcome to our plateforme, We are happy to joining us!
+
+Thank you!
+
+----
+Team

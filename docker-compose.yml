@@ -1,0 +1,59 @@
+version: '3'
+services:
+  redis:
+    image: redis:2.8.19
+    hostname: redis
+
+
+  # RabbitMQ - queue
+  rabbit:
+    hostname: rabbit
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=mypass
+    ports:
+      - "5672:5672"  
+      - "15672:15672"  # here, we can access rabbitmq management plugin
+  app:
+    restart: always
+    env_file: .env
+    build: .
+    dockerfile: Dockerfile
+    ports:
+      - "5005:5005"
+    networks:
+      - db_network
+      - web_network
+    links:
+      - rabbit
+      - redis
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "celery worker -A core -l info"
+    volumes:
+      - .:/app
+    links:
+      - rabbit
+      - redis
+    depends_on:
+      - rabbit
+  nginx:
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "85:85"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - app
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge
+    
