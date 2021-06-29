@@ -1,9 +1,9 @@
 # DJANGO REST API MICROBLOG
 
 ## TECHNOLOGIES USED
-- **Python3.6**: [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively
+- **Python3.9**: [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively
 
-- **Django 3**: [Django](https://docs.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+- **Django 3.1**: [Django](https://docs.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
 
 - **Django REST framework**: [Django REST framework](http://www.django-rest-framework.org/) is a powerful and flexible toolkit for building Web APIs
 
