@@ -87,15 +87,19 @@ class UserDetails(generics.RetrieveUpdateDestroyAPIView):
         return queryset
     serializer_class = UserSerializer
 
-class UserViewSet(viewsets.ViewSet):
-    permission_classes = (IsAuthenticated,)
-    def retrieve(self, request, pk=None):
-        queryset = User.objects.get(pk=pk)
-        serializer = UserSerializer(queryset)
-        return Response(serializer.data)
+# hashtag System:
+# 5. An authenticated user can add/delete a hashtag to/from their favorites.
+# I Don't have enough time to complete it.
+# We should probably use generics APIView
+# class UserViewSet(viewsets.ViewSet):
+#     permission_classes = (IsAuthenticated,)
+#     def retrieve(self, request, pk=None):
+#         queryset = User.objects.get(pk=pk)
+#         serializer = UserSerializer(queryset)
+#         return Response(serializer.data)
     
-    def update(self, request, pk=None, *args, **kwargs):
-        return super().update(request, *args, **kwargs)
+#     def update(self, request, pk=None, *args, **kwargs):
+#         return super().update(request, *args, **kwargs)
     
 class HashtagPostsList(generics.ListAPIView):
     permission_classes = (IsAuthenticated,)
