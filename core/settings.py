@@ -129,6 +129,6 @@ DEFAULT_FROM_EMAIL = ''
 CELERY_BEAT_SCHEDULE = {
     'scheduled_task': {
         'task': 'api.tasks.delete_messages_in_ten_days',
-        'schedule': datetime.timedelta(seconds=5),
+        'schedule': datetime.timedelta(days=1),
     },
 }
