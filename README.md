@@ -21,7 +21,7 @@
 ### Clone the project
 ```
 $ git clone https://github.com/hessaydi/microblog.git
-$ cd django-rest-api-yummy-recipes
+$ cd microblog
 ```
 
 ### Create the virtual environment and active it.
@@ -52,8 +52,6 @@ $ python manage.py runserver
 
     Execute the url **localhost:8000/api/** in your browser
 
-    **password:** normaluser1234 for complete swagger-docs
-
 ### RUN TASKS USING CELERY AND RABBITMQ
 
 ```
@@ -74,4 +72,5 @@ $ celery -A core beat -l info
 Visit the links below for the API documentation
 
 [Django Rest API Framework Documentation ](https://www.django-rest-framework.org/)
+
 [Django Framework Documentation](https://docs.djangoproject.com/)
