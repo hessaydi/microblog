@@ -71,5 +71,5 @@ $ celery -A core beat -l info
 ## API Documentation
 Visit the links below for the API documentation
 
-    [Django Rest API Framework Documentation ](https://www.django-rest-framework.org/)
-    [Django Framework Documentation](https://docs.djangoproject.com/)
+- [Django Rest API Framework Documentation ](https://www.django-rest-framework.org/)
+- [Django Framework Documentation](https://docs.djangoproject.com/)
